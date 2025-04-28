@@ -13,24 +13,25 @@ const Body = () =>{
     const dispatch = useDispatch();
 
     useEffect(()=>{
-        onAuthStateChanged(auth, (user) => { // user object passed internall by firebase SDK
+       const unSubscribe =  onAuthStateChanged(auth, (user) => { // user object passed internall by firebase SDK
             // User is Signed In
             if (user) {
               // User is signed in, see docs for a list of available properties
               // https://firebase.google.com/docs/reference/js/auth.user
               const {uid, email, displayName, photoURL} = user
-              dispatch(addUser({uid:uid, email:email, displayName:displayName, photoURL:photoURL}))
+              dispatch(addUser({uid:uid, email:email, displayName:displayName, photoURL:photoURL}));
         
               // user sings in - navigate to browse page 
-              navigate("/browse")
+              navigate("/browse");
               
             } else {
               // User is signed out
-              dispatch(removeUser())
+              dispatch(removeUser());
 
               // user signs out - navigate to main page
-              navigate("/")
+              navigate("/");
             }
+            return () => unSubscribe();
           });
     },[])
 

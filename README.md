@@ -52,7 +52,7 @@
                     - # Note - Add this getAuth() - firebase.js - import {getAuth} from "firebase/auth"
                     - export const auth = getAuth(); - use it everywhere now
                 - Access token returned - after successful SingUp & Login
-
+                
 - Create Redux Store - Install two libraries - Add user to the redux store
     - Command # npm install react-redux, npm install -D @reduxjs/toolkit
     - Adding - onAuthStateChange() use this API ? - Don't want to call - useDispatch() multiple times - acts like # event listener
@@ -61,10 +61,8 @@
     - Call it only once - therefore, using useEffect() - useDispatch() will be called once
     - After logging , Signing up completes - useNavigate() hook - to navigate to a different page
 
-
 - Sign Out Feature
-     - Use SignOut() Api from - Firebase - Password Authentication
-
+     - Use SignOut() Api from - Firebase - Password Authentication   
 
 - Display User's Name - Update a user's profile
     - Use updateProfile() Api from - Firebase - Manage Users
@@ -72,7 +70,11 @@
     - Therefore, must dispatch - addUser() at - Login and Body.js 
     - After every page reload onAuthStateChaged() - runs - populates the Redux Store
 
+- Detach listener when component unmounts - unSubscribe to the onAuthStateChanged callback
 - Fetch Movies From - TMD Movies
+- Addded Hardcoded values into constants.js file
+
+
 
 
 

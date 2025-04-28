@@ -6,6 +6,7 @@ import { auth } from "../utils/firebase";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
     const [isSignInForm, setIsSignInForm] = useState(true);
@@ -46,7 +47,7 @@ const Login = () => {
 
        // Next, handle signIn , SignUp - If the form data is correct - validate.js - returns null 
        // Error message presents - return - don't do anything
-       if(message) return 
+       if(message) return;
 
        // For signed and not signedIn 
 
@@ -62,7 +63,7 @@ const Login = () => {
                 updateProfile(auth.currentUser, {
                     // updating displayname and photoURL
                     displayName: UserName.current.value, 
-                    photoURL: "https://avatars.githubusercontent.com/u/73595473?s=400&u=81cd5ae6c3a65cfaf175d1c41c667c5bed40fcf9&v=4",
+                    photoURL: USER_AVATAR,
                   })
                   .then(() => {
                     // Dispatching an action - to update store
