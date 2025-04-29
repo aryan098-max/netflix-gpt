@@ -85,7 +85,11 @@
     - Fetch trailerVideo use key to access Youtube video
     - Embedded the Youtube video and make it autoplay (?&autoplay=1&mute=1)
 
+- Build Secondary Component 
+    - Build MovieList - Multiple Lists - Multiple Calls - Custom Hooks For Different Calls - Increases movieSlice data
+        - Build MovieCard 
 
+- Made UI better using tailwindCSS
 
 
 # Features 
