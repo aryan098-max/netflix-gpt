@@ -71,9 +71,19 @@
     - After every page reload onAuthStateChaged() - runs - populates the Redux Store
 
 - Detach listener when component unmounts - unSubscribe to the onAuthStateChanged callback
-- Fetch Movies From - TMD Movies
 - Addded Hardcoded values into constants.js file
 
+
+- Fetch Movies From - TMD Movies
+    - Register TMBD API & Get Access Token (copy form TMBD)
+    - MainContainer (Video Title & Video Background) & Secondary Container
+    - Create Custom Hook - For TMBD Now playing api 
+    - Create movieSlice add to Redux Store
+    - Fetch Title and Overview from movieSlice
+    - Video API - For playing background video (pass movieId from movieSlice)
+    - Create trailer state and addTrailerVideo into movieSlice (state variable optional way)
+    - Fetch trailerVideo use key to access Youtube video
+    - Embedded the Youtube video and make it autoplay (?&autoplay=1&mute=1)
 
 
 
