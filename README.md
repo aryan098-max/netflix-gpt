@@ -86,10 +86,18 @@
     - Embedded the Youtube video and make it autoplay (?&autoplay=1&mute=1)
 
 - Build Secondary Component 
-    - Build MovieList - Multiple Lists - Multiple Calls - Custom Hooks For Different Calls - Increases movieSlice data
+    - Build MovieList - Multiple Lists  
         - Build MovieCard 
+        - Multiple API Calls - Multiple Custom Hooks (For Each MovieType) - *N intial State & *N actions
 
-- Made UI better using tailwindCSS
+
+- GPT Search 
+    - Controlling Search Box from header (Either use React Context or Redux)
+    - Created Two Components - GptSearchBar & GptMovieSuggestions
+    - Create GPT Slice 
+    - GPT Search Bar 
+    - # (**) Multilingual Option - configSlice - constLanguage.js - Added Chaneges to constant.js
+    - Made Header Dynmaic - HomePage and GPTSearch
 
 
 # Features 

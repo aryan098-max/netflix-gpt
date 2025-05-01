@@ -7,6 +7,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 import { USER_AVATAR } from "../utils/constants";
+import { BACKGROUND_IMAGE } from "../utils/constants";
 
 const Login = () => {
     const [isSignInForm, setIsSignInForm] = useState(true);
@@ -46,7 +47,7 @@ const Login = () => {
 
 
        // Next, handle signIn , SignUp - If the form data is correct - validate.js - returns null 
-       // Error message presents - return - don't do anything
+       // Error message presents - return - don't do anything - Early Return
        if(message) return;
 
        // For signed and not signedIn 
@@ -113,7 +114,7 @@ const Login = () => {
             <Header/>
             <div className="absolute">
                 <img
-                    src= "https://assets.nflxext.com/ffe/siteui/vlv3/69bec183-9cc8-49d4-8fc2-08228d3c91b4/web/IN-en-20250414-TRIFECTA-perspective_c8273fb1-8860-4ff5-bd1c-c2c4b44d5f2a_small.jpg"
+                    src= {BACKGROUND_IMAGE}
                     alt = "bgimage"
                 />
             </div>
