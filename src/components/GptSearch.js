@@ -6,7 +6,8 @@ import { BACKGROUND_IMAGE } from '../utils/constants'
 const GptSearch = () => {
   return (
     <div>
-           <div className="absolute">
+          {/* fixed the problem of vertial overflow */}
+           <div className="fixed">
                 <img
                     src= {BACKGROUND_IMAGE}
                     alt = "bgimage"

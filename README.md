@@ -98,10 +98,20 @@
     - GPT Search Bar 
     - # (**) Multilingual Option - configSlice - constLanguage.js - Added Chaneges to constant.js
     - Made Header Dynmaic - HomePage and GPTSearch
+    - Get API Key from platform.opeanAI.com (free for 3 months)
+    - Install openai package - npm install openai
+    - Create an openai configuration file 
+    - Add - dangerouslyAllowBrowser: true - in openai.js
+    - Make an api call from - After Clicking Button 
+    - Open AI - Not Free - Use Dummy Data 
+    - Use Dummy Data - To make an API call - Search API Call - TMBD 
+    - Returns 5 promises - async funtion - Resolve - Promise.all() 
+    - Add Result to Redux Store - gptSearchResults, tmbdSearchResults
+    - Add Result to Redux Store - Using One - Action -(Use obj) addMovies({gptSearchResult:gptMovies, tmdbSearchResult:tmdbMovies})
+      later (destructure it) - const {gptSearchResult, tmdbSearchResult} - state.gptSearchResult = gptSearchResult, ...... 
 
 
 # Features 
-
 - Login/Sign up 
     - Sign In / Sign up Form 
     - redirect to Browser Page 

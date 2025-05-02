@@ -2,6 +2,7 @@ import React from 'react'
 import { IMG_CDN } from '../utils/constants'
 
 const MovieCard = ({movie}) => {
+  if(!movie?.poster_path) return null;
   return (
     <div>
       <div className='min-w-[180px]'>

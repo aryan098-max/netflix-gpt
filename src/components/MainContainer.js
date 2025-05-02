@@ -10,7 +10,7 @@ const MainContainer = () => {
     // resolving - null first time - early return
     if(!movies) return;
 
-    const mainMovie = movies[1]
+    const mainMovie = movies[0]
     // console.log(mainMovie);
 
     // destructuring data

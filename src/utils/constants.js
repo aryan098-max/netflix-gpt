@@ -9,11 +9,13 @@ export const IMG_CDN = "https://image.tmdb.org/t/p/original/"
 // language config
 export const SUPPORTED_LANGUAGES = [{identifier:"en", name:"English"},{identifier:"hindi", name:"hindi"},{identifier:"spanish", name:"spanish"}]
 
+// openAI key
+export const OPENAI_Key = process.env.REACT_APP_OPENAPI_KEY
 
 export const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMDA3ZWU3NDRhYmEwYmY5OTVhYjkyZWY0YzZlZTJjMyIsIm5iZiI6MTc0NTg0MDEyNS42NzYsInN1YiI6IjY4MGY2N2ZkNWFkMGI2N2M2NmVhZDFmYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.aqwJeJnzvHTmNcUJoqULB3TvRJHCSFA_2bd2ifiYPf4'
+    Authorization: 'Bearer ' + process.env.REACT_APP_TMDB_KEY
+  }
 }
-};

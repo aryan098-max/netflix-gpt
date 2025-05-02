@@ -1,12 +1,16 @@
 import { API_OPTIONS } from '../utils/constants'
 import { addNowPlayingMovies} from "../utils/movieSlice";
-import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-
+import { useDispatch, useSelector } from 'react-redux';
 const useNowPlayingMovies = () =>{
 
-     // Fetch Data from TMBD API and update store
-  const dispatch = useDispatch();
+  // Fetch Data from TMBD API and update store
+  const dispatch = useDispatch(); 
+
+  // Suscribing to the Store - prevent unncessary api calls
+  const nowPlayingMovies = useSelector((store)=>store?.movies?.nowPlayingMovies)
+
+  // const nowPlayingMovies = useSelector((store)=>store?.movies?.nowPlayingMovies)
 
   const getNowPlayingMovies = async ()=>{
 
@@ -19,7 +23,8 @@ const useNowPlayingMovies = () =>{
   }
     
   useEffect(()=>{
-    getNowPlayingMovies();
+    // nowPlayingMovies - already exists - don't make an API call
+     !nowPlayingMovies && getNowPlayingMovies();
   },[])
 }
 
