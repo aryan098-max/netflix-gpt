@@ -13,7 +13,7 @@ const GptMovieSuggestions = () => {
   return (
 
     
-       <div className='p-4 m-4 text-white absolute bg-black/80 w-6/12 top-[750px] left-1/2 transfrom -translate-x-1/2 -translate-y-1/2'>
+       <div className='p-4 m-4 text-white absolute bg-black/80 w-10/12 md:w-6/12 top-[620px] md:top-[750px] left-1/2 transfrom -translate-x-1/2 -translate-y-1/2'>
        {
           gptSearchResults.map((movieName,index)=>(
             // > tmdbSearchResults[index] - Cause - Array of Array - Rest is handled by MovieList

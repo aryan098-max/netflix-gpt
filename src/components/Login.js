@@ -114,21 +114,22 @@ const Login = () => {
             <Header/>
             <div className="absolute">
                 <img
+                    className="h-screen object-cover md:h-auto"
                     src= {BACKGROUND_IMAGE}
                     alt = "bgimage"
                 />
             </div>
 
-            <div className= "w-3/12 p-12 bg-black/80 absolute left-1/2 top-1/2 transfrom -translate-x-1/2 -translate-y-1/2">
+            <div className= "w-10/12 md:w-3/12 p-8 md:p-12 bg-black/80 absolute left-1/2 md:top-1/2 top-[35%] transfrom -translate-x-1/2 -translate-y-1/2">
                 <form className=" text-white" onSubmit={(e)=>{e.preventDefault()}}>
                     
-                    <h1 className="text-3xl font-bold py-4">{isSignInForm? "Sign In" : "Sign Up"}</h1>
+                    <h1 className="text-xl md:text-3xl font-bold py-2 md:py-4">{isSignInForm? "Sign In" : "Sign Up"}</h1>
 
                     { 
                         !isSignInForm && 
                         (<input
                              ref={UserName}
-                             className="p-4 my-3 w-full rounded-lg bg-black/50 border border-white" 
+                             className="p-2 md:p-4 my-2 md:my-3 w-full rounded-lg bg-black/50 border border-white text-sm md:text-lg" 
                              placeholder="UserName" 
                              type="textarea"/>
                              
@@ -137,13 +138,13 @@ const Login = () => {
 
                     <input 
                         ref={email}
-                        className="p-4 my-3 w-full rounded-lg bg-black/50 border border-white" 
+                        className="p-3 my-2 md:p-4 md:my-3 w-full rounded-lg bg-black/50 border border-white text-sm md:text-lg" 
                         placeholder="Email Address" 
                         type="email"
                     />
                     <input 
                         ref={password}
-                        className="p-4 my-3 w-full rounded-lg bg-black/50  border border-white" 
+                        className="p-3 mt-2 mb-0  md:p-4 md:my-3 w-full rounded-lg bg-black/50  border border-white text-sm md:text-lg" 
                         placeholder="Password"
                         type="password"
                     />
@@ -151,24 +152,24 @@ const Login = () => {
                     <p className="text-red-500 font-bold py-2">{errorMessage}</p>
 
                     <button 
-                        className="p-3 my-2 bg-red-700 w-full rounded-lg" 
+                        className="p-2 my-1 md:p-3 md:my-1 bg-red-700 w-full rounded-lg text-sm md:text-lg" 
                         onClick={handleButtonClick}>
                         {isSignInForm ? "Sign In" : "Sign Up"}
                     </button>
 
-                    <div className="flex gap-2 py-4">
+                    <div className="flex py-4">
                     {
                         isSignInForm ? (
                             <div className="flex gap-2">
-                            <h1>New to Netflix?</h1>
-                            <h1 onClick={toggleSignInForm} className="hover:underline cursor-pointer font-bold">
+                            <h1 className="text-sm md:text-[16px]">New to Netflix?</h1>
+                            <h1 onClick={toggleSignInForm} className="hover:underline cursor-pointer text-sm md:text-[16px] font-bold ">
                                 <Link>Sign up now</Link>
                             </h1>
                             </div>
                         ) : (
                             <div className="flex gap-2">
-                            <h1>Already have an account?</h1>
-                            <h1 onClick={toggleSignInForm} className="hover:underline cursor-pointer font-bold">
+                            <h1 className="text-sm  md:text-[16px]">Already have an account?</h1>
+                            <h1 onClick={toggleSignInForm} className="hover:underline cursor-pointer font-bold text-sm md:text-[16px]">
                                 <Link>Sign in now</Link>
                             </h1>
                             </div>

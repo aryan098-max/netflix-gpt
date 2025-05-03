@@ -108,7 +108,11 @@
     - Returns 5 promises - async funtion - Resolve - Promise.all() 
     - Add Result to Redux Store - gptSearchResults, tmbdSearchResults
     - Add Result to Redux Store - Using One - Action -(Use obj) addMovies({gptSearchResult:gptMovies, tmdbSearchResult:tmdbMovies})
-      later (destructure it) - const {gptSearchResult, tmdbSearchResult} - state.gptSearchResult = gptSearchResult, ...... 
+      later (destructure it) - const {gptSearchResult, tmdbSearchResult} - state.gptSearchResult = gptSearchResult, ......
+    - Memoization - Stop unncessary api calls
+
+- Made Website Responsive for small devices
+ 
 
 
 # Features 
