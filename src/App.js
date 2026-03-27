@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Login from "./components/Login";
 import Browse from "./components/Browse";
 
-const App = () => {
 
   const appRouter = createBrowserRouter([
       {
@@ -26,8 +25,9 @@ const App = () => {
               }
           ],
         }
-  ])
+  ])  
 
+const App = () => {
   return (
     <Provider store={appStore}>
       <RouterProvider router={appRouter}/>
